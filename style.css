@@ -10,6 +10,10 @@
   font-family: saluf2;
   url:"./font/d77b39f40383b63d32e3.ttf"
 }
+@font-face{
+  font-family: pptele;
+  url:"./font/PP Telegraf - Free for Personal Use/PPTelegraf-Regular.otf"
+}
 html,body
 {
   width: 100%;
@@ -17,74 +21,55 @@ html,body
   background-color: #000;
   color: #fff;
  
+
 }
-nav
-{
+nav {
   font-family: saluf1;
 }
-.navs1 {
 
-  
+
+.navs1, .navs2, .navs3 {
   height: 3vh;
   font-size: 1rem;
   cursor: pointer;
   overflow: hidden;
+  position: relative;
 }
 
-.navs1 h3 {
+.navs1 h3, .navs2 h3, .navs3 h3 {
   color: #fff;
-
-  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s;
-}
-.navs1:hover .navb1 {
-  margin-top: -3vh;
-}
-.navs2 {
-
-  
-  height: 3vh;
-  font-size: 1rem;
-  cursor: pointer;
-  overflow: hidden;
+  transition: transform 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.navs2 h3 {
-  color: #fff;
-
-  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s;
-}
-.navs2:hover .navb2 {
-  margin-top: -3vh;
-}
-.navs3 {
-
-  
-  height: 3vh;
-  font-size: 1rem;
-  cursor: pointer;
-  overflow: hidden;
+.nav-hidden {
+  position: absolute;
+  top: 3vh;
+  left: 0;
+  width: 100%;
 }
 
-.navs3 h3 {
-  color: #fff;
-  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s;
-  
-}
-.navs3btn
-{
-  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s;
-}
-.navs3btn:hover
-{
-  background-color: #fff;
-  
-}
-.navs3btn h3:hover
-{
-  color: #000;
-  
-}
+
+.navs1:hover .navb1, 
+.navs2:hover .navb2, 
 .navs3:hover .navb3 {
-  margin-top: -2.5vh;
-  
+  transform: translateY(-3vh);
 }
+
+
+.navs3btn {
+  transition: background-color 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.navs3btn:hover {
+  background-color: #fff;
+}
+
+.navs3btn h3:hover {
+  color: #000;
+}
+
+.s1
+{
+  font-family: pptele;
+}
+

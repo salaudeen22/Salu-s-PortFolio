@@ -73,3 +73,6 @@ nav {
   font-family: pptele;
 }
 
+.s3overlay {
+  pointer-events: none;
+}

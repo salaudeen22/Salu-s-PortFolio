@@ -319,7 +319,7 @@ controls.enableDamping = true;
 controls.dampingFactor = 0.05;
 
 const textureLoader = new THREE.TextureLoader();
-const texture = textureLoader.load("./assests/Animate12.png");
+const texture = textureLoader.load("/assests/Animate12.png");
 
 const geometry = new THREE.CylinderGeometry(2, 2, 2, 32, 1, true);
 const material = new THREE.MeshStandardMaterial({

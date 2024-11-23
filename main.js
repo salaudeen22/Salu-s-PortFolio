@@ -320,7 +320,7 @@ controls.dampingFactor = 0.05;
 
 
 const textureLoader = new THREE.TextureLoader();
-const texture = textureLoader.load("/public/assests/AnimateSalu123.png", () => {
+const texture = textureLoader.load("assests/AnimateSalu123.png", () => {
     console.log("Texture loaded successfully");
 }, undefined, (error) => {
     console.error("Error loading texture:", error);

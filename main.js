@@ -15,6 +15,77 @@ const scroll = new LocomotiveScroll({
   },
 });
 
+const preloader = document.querySelector(".preloader");
+const loaderText = document.querySelector(".loaderText");
+const text = loaderText.textContent;
+const tl = gsap.timeline();
+
+const breakText = () => {
+  let buffer = "";
+  const split = text.split("");
+  for (let i = 0; i < split.length; i++) {
+    if (i === 0) {
+      buffer += `<span class="absolute f1">${split[i]}</span>`;
+    } else if (i === split.length - 1) {
+      buffer += `<span class="absolute l1">${split[i]}</span>`;
+    } else {
+      buffer += `<span class="absolute lText">${split[i]}</span>`;
+    }
+  }
+  loaderText.innerHTML = buffer;
+};
+
+window.addEventListener("load", () => {
+  breakText();
+  
+  tl.fromTo(".lText", {
+    y: 100,
+    opacity: 0
+  }, {
+    y: 0,
+    opacity: 1,
+    duration: 0.8,
+    stagger: 0.134,
+    ease: "power4.out"
+  });
+  tl.to(".lText",{
+    y:-100,
+    opacity: 0,
+    duration: 0.8,
+    stagger: 0.134,
+    ease: "power4.in"
+  });
+  const distance = window.innerWidth / 4; 
+  tl.to(".f1", {
+    x: distance,
+    duration: 0.8,
+    ease: "power4.in"
+  },"a");
+  tl.to(".l1", {
+    x: -distance,
+    duration: 0.8,
+    ease: "power4.in"
+  },"a");
+  tl.fromTo(".preloader", {
+    y: "0%",
+ 
+    backgroundColor: "white",
+  
+  }, {
+    y: "100%",
+  
+    backgroundColor: "black",
+  
+    duration: 0.8,
+    ease: "circ.out",
+    onComplete: () => preloader.style.display = "none"
+  })
+
+  
+
+  
+ 
+});
 
 document.querySelectorAll("section").forEach((section) => {
   section.setAttribute("data-scroll-section", "");

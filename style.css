@@ -77,3 +77,13 @@ nav {
 .s3overlay {
   pointer-events: none;
 }
+
+.loaderText {
+  position: relative;
+  display: inline-block; 
+}
+
+.f1, .l1, .lText {
+  position: relative;
+  display: inline-block; 
+}

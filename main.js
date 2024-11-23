@@ -1,7 +1,6 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import LocomotiveScroll from "locomotive-scroll";
-import { Bloom, EffectComposer, ToneMapping } from "@react-three/postprocessing";
 
 const scroll = new LocomotiveScroll({
   el: document.querySelector(".ripples"),
